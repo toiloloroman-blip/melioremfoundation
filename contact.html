@@ -56,6 +56,10 @@
       <p style="margin-bottom:1.8rem">Whether you need a bed, want to refer someone, or want
       to help &mdash; this reaches us directly.</p>
       <form id="contact-form">
+        <!-- honeypot: hidden from people, irresistible to bots. Web3Forms
+             discards any submission where this arrives filled in. -->
+        <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off"
+               style="display:none" aria-hidden="true">
         <div class="form-grid">
           <div><label class="f" for="name">Your name</label><input type="text" id="name" name="name" required></div>
           <div><label class="f" for="email">Email</label><input type="email" id="email" name="email" required></div>
